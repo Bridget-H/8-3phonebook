@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>phonebook</h1>
+<form action="" method="POST">
+    {{form.csrf_token}}
+    <div class="form-group"> 
+        <fieldset>
+            {{form.password.label}}
+            {{form.passwork(class='form-control', placeholder='Phonenumber')}}
+        </feildset>
+        <fieldset>
+            {{form.confirm_pass.label}}
+            {{form.confirm_pass(class='form-control', placeholder='name')}}
+        </feildset>
+        {{ form. subnit(class='btn btn-primary')}}
+    </div>
+</form>
+
+{% endblock content %}
